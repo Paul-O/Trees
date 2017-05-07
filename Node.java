@@ -3,6 +3,7 @@ public class Node
   private String data;
   private Node right;
   private Node left;
+  private Node parent;
   private int count = 0;
   public Node(String data)
   {
@@ -32,4 +33,11 @@ public class Node
   {
     return left;
   }
+  public void setParent(Node p)
+  {
+    this.parent = p;
+  }
+  public Node getParent()
+  {
+    return parent;
 }
