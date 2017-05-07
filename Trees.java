@@ -85,8 +85,12 @@ public class Trees
   {
     
   }
-  public void print()
+  public void print(Node z)
   {
-    
+    if(z != null)
+    {
+      print(z.left);
+      print(z.right);
+    }
   }
 }
