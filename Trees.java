@@ -81,9 +81,9 @@ public class Trees
       r.count ++;
     }
   }
-  public void delete()
+  public void delete(Node q)
   {
-    
+    q = null;
   }
   public void print(Node z)
   {
