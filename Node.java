@@ -1,7 +1,9 @@
 public class Node
 {
   private String data;
-  private Node next;
+  private Node right;
+  private Node left;
+  private int count = 0;
   public Node(String data)
   {
     this.data = data;
@@ -14,12 +16,20 @@ public class Node
   {
     return data;
   }
-  public void setNext(Node n)
+  public void setRight(Node r)
   {
-    this.next = n;
+    this.right = r;
   }
-  public Node getNext()
+  public Node getRight()
   {
-    return next;
+    return right;
+  }
+  public void setLeft(Node l)
+  {
+    this.left = l;
+  }
+  public Node getLeft()
+  {
+    return l;
   }
 }
