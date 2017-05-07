@@ -13,16 +13,9 @@ public class Trees
       return false;
     }
   }
-  public boolean search(String value)
+  public void search()
   {
-    if (root == null)
-    {
-      return false;
-    }
-    else
-    {
-      return root.search(value);
-    }
+    
   }
   public void inset(String x)
   {
@@ -35,20 +28,20 @@ public class Trees
       Node temp = root;
       while(temp != null)
       {
-        if(temp.getData().equalsIgnoreCase(x) = 0)
+        if(temp.data.equalsIgnoreCase(x) = 0)
         {
           temp.count ++;
           break;
         }
         else if(temp.getData().equalsIgnoreCase(x) < 0)
         {
-          temp.setRight(x);
+          temp.right = new Node(x);
           temp.count ++;
           break;
         }
-        else if(temp.getData().equalsIgnoreCase(x) > 0)
+        else if(temp.data.equalsIgnoreCase(x) > 0)
         {
-          temp.setLeft(x);
+          temp.left = new Node(x);
           temp.count ++;
           break;
         }
@@ -67,7 +60,7 @@ public class Trees
       {
         r.left = n;
         r.left.parent = r;
-        r.left ++;
+        r.left.count ++;
       }
     }
     else if(n.getData().compareToIgnoreCase(r.getData()) > 0)
@@ -80,10 +73,10 @@ public class Trees
       {
         r.right = n;
         r.right.parent = r;
-        r.right ++;
+        r.right.count ++;
       }
     }
-    else if(n.getData().compareToIgnoreCase(r.getData()) = 0)
+    else if(n.data.compareToIgnoreCase(r.data) = 0)
     {
       r.count ++;
     }
