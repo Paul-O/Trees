@@ -30,6 +30,6 @@ public class Node
   }
   public Node getLeft()
   {
-    return l;
+    return left;
   }
 }
