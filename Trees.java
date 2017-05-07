@@ -13,9 +13,16 @@ public class Trees
       return false;
     }
   }
-  public int search()
+  public boolean search(String value)
   {
-    
+    if (root == null)
+    {
+      return false;
+    }
+    else
+    {
+      return root.search(value);
+    }
   }
   public void inset(String x)
   {
