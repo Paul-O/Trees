@@ -13,9 +13,20 @@ public class Trees
       return false;
     }
   }
-  public void search()
+  public Node search(String toFind, Node n)
   {
-    
+    if(toFind == n.data)
+    {
+      return n;
+    }
+    else if(toFind < n.data)
+    {
+      return search(toFind, n.left);
+    }
+    else if(toFind > n.data)
+    {
+      return search(toFind, n.right);
+    }
   }
   public void inset(String x)
   {
